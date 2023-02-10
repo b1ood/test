@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    row-gap: 20px;
+    max-width: 900px;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1500px) {
+    h2 {
+        font-size: 36px;
+    }
+
+    h6, label, input, input::placeholder, select{
+        font-size: 22px !important;
+    }
+
+    option {
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    form > div {
+        width: 90% !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        margin: 0;
+    }
+
+    .agreement {
+        display: grid;
+        row-gap: 20px;
+        flex-direction: column;
+    }
+
+    .agreement > small {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center !important;
+    }
+}

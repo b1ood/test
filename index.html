@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Демо Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-warning-subtle text-body-secondary">
+
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalLabel">Спасибо за Ваш интерес!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                Ваша заявка успешно отправлена и находится в обработке. Ожидайте email с подтверждением бронирования.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="container text-center bg-light border rounded-4">
+
+    <h2 class="fw-bold">Отправить заявку на участие в семинаре</h2>
+
+    <h6>Организаторы свяжутся с Вами для подтверждения записи.
+        Участие в семинаре
+        <a class="text-reset"
+           data-bs-toggle="tooltip" data-bs-placement="top"
+           data-bs-custom-class="custom-tooltip"
+           data-bs-title="Никаких данных банковских карт">бесплатное</a>.</h6>
+
+    <form>
+        <div class="d-grid row-gap-3 col-6 mx-auto">
+            <div class="mb-3 text-start">
+                <label for="memberName" class="form-label">Ваше имя:</label>
+                <input type="text" class="form-control" id="memberName" placeholder="Иванов Иван">
+                <div class="invalid-status">
+                    <span class="invalid-feedback position-absolute w-auto">Пожалуйста, введите корректные данные.</span>
+                </div>
+            </div>
+
+            <div class="mb-3 text-start">
+                <label for="memberMail" class="form-label">Контактный email:</label>
+                <input type="email" class="form-control" id="memberMail" placeholder="example@mail.com">
+                <div class="invalid-status">
+                    <span class="invalid-feedback position-absolute w-auto">Пожалуйста, введите корректный e-mail адрес.</span>
+                </div>
+            </div>
+
+            <div class="mb-3 text-start">
+                <label for="select">Интересующий семинар:</label>
+                <select class="form-select" id="select">
+                    <option selected disabled>Выбрать</option>
+                    <option value="1">Шрек - прототип идеального мужчины?</option>
+                    <option value="2">Осел и Дракон, или почему вы подходите друг другу.</option>
+                    <option value="3">Лорд Фаркуат, или как выши комплексы отражаются на размерах вашего замка.</option>
+                </select>
+                <div class="invalid-status">
+                    <span class="invalid-feedback position-absolute w-auto">Пожалуйста, введите корректный e-mail адрес.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="agreement col-8 d-flex mt-4 mx-auto justify-content-around">
+            <small class="text-start lh-1 col-8">
+                Все поля обязательны для заполнения. <br>
+                Отправляя заявку, Вы соглашаетесь с договором публичной оферты и политикой обработки данных.
+            </small>
+
+            <button id="submit" class="btn btn-outline-secondary" disabled>Отправить</button>
+        </div>
+    </form>
+</section>
+
+<div class="loading position-absolute top-50 start-50 translate-middle d-none">
+    <div class="spinner-grow text-warning" role="status">
+        <span class="visually-hidden">Загрузка...</span>
+    </div>
+    <div class="spinner-grow text-warning" role="status">
+        <span class="visually-hidden">Загрузка...</span>
+    </div>
+    <div class="spinner-grow text-warning" role="status">
+        <span class="visually-hidden">Загрузка...</span>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+</html>
