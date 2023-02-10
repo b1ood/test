@@ -51,7 +51,7 @@ body {
     }
 }
 
-@media screen and (max-height: 666px) {
+@media (max-height: 666px) and (max-width: 576px){
     .container {
         position: static;
         margin: 0;
